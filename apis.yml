@@ -1,23 +1,56 @@
 aid: appwork
+
 name: AppWork
-description: 'AppWork is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'AppWork provides a mobile‑first property maintenance platform for multifamily housing operators. The solution streamlines work order creation, technician dispatch, digital make‑ready boards, inspections, and reporting, enabling property managers to improve efficiency, reduce costs, and enhance resident satisfaction through data‑driven insights.'
+
 url: https://raw.githubusercontent.com/api-evangelist/appwork/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/appwork-hosts.yml
+- type: Vendors
+  url: vendors/appwork-vendors.yml
+- type: DomainSecurity
+  url: security/appwork-domain-security.yml
 - type: Website
   url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No developer documentation or API endpoints were found on the company website.
+  evidence:
+    - url: https://www.nasdaqprivatemarket.com/developers
+      status: 404
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
